@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日看板</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>每日看板</h1>
+    <span id="clock" class="muted"></span>
+    <button id="open-settings" class="settings-btn">⚙ 設定股票／商品</button>
+  </div>
+  <nav class="bar">
+    <div class="group" id="filters" role="tablist" aria-label="篩選">
+      <button data-f="all" class="on">全部</button>
+      <button data-f="nba">NBA</button>
+      <button data-f="stock">股票</button>
+      <button data-f="3c">3C</button>
+    </div>
+    <div class="group" id="days" aria-label="NBA 日期">
+      <span class="muted small">NBA 日期</span>
+      <button data-d="-1">昨天</button>
+      <button data-d="0" class="on">今天</button>
+      <button data-d="1">明天</button>
+    </div>
+  </nav>
+  <div id="status" class="muted small"></div>
+</header>
+<main id="grid" class="grid"></main>
+
+<dialog id="settings">
+  <form method="dialog" id="settings-form">
+    <h2>設定股票與商品</h2>
+
+    <section>
+      <h3>自選股</h3>
+      <p class="muted small">台股填代號（例如 2330、0056，上市上櫃都可以）；美股填英文代號（例如 AAPL）。名稱可以留空，會自動抓。</p>
+      <div id="stock-rows"></div>
+      <button type="button" id="add-stock" class="add">＋ 新增股票</button>
+    </section>
+
+    <section>
+      <h3>3C 商品</h3>
+      <p class="muted small">每天會自動到 PChome 24h、momo、Yahoo購物中心 搜尋「搜尋關鍵字」，只算標題依序含有這些字、價格在官方價 70%～130% 之間的商品（配件、福利品、二手會被排除）。抓到不對的型號時，把那個字加進「排除的字」。</p>
+      <div id="product-rows"></div>
+      <button type="button" id="add-product" class="add">＋ 新增商品</button>
+    </section>
+
+    <div id="settings-msg" class="small"></div>
+    <div class="actions">
+      <button type="button" id="cancel-settings">取消</button>
+      <button type="submit" id="save-settings" class="on">儲存</button>
+    </div>
+  </form>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>

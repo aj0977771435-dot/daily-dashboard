@@ -1,0 +1,74 @@
+{
+  "stocks": [
+    {
+      "symbol": "0050",
+      "name": "元大台灣50",
+      "market": "TW"
+    },
+    {
+      "symbol": "00878",
+      "name": "國泰永續高股息",
+      "market": "TW"
+    },
+    {
+      "symbol": "VOO",
+      "name": "Vanguard S&P 500 ETF",
+      "market": "US"
+    },
+    {
+      "symbol": "QQQM",
+      "name": "Invesco NASDAQ 100 ETF",
+      "market": "US"
+    }
+  ],
+  "products": [
+    {
+      "name": "ARTISAN 劍匠 FX ZERO 零 電競滑鼠墊（軟 XL）",
+      "official_price": null,
+      "official_url": "",
+      "search": "ARTISAN FX ZERO XL",
+      "exclude": [
+        "TenZ",
+        "經典",
+        "軟XXL",
+        "普通XXL",
+        "特軟XXL"
+      ],
+      "price_urls": []
+    },
+    {
+      "name": "Razer Viper V4 Pro 滑鼠",
+      "official_price": null,
+      "official_url": "",
+      "search": "Viper V4 Pro",
+      "exclude": [
+        "防滑",
+        "貼",
+        "鼠腳",
+        "握把",
+        "耳機",
+        "2入"
+      ],
+      "price_urls": []
+    }
+  ],
+  "refresh": {
+    "tw_market_open_seconds": 60,
+    "tw_market_closed_seconds": 1800,
+    "us_market_open_seconds": 60,
+    "us_market_closed_seconds": 1800,
+    "nba_live_seconds": 30,
+    "nba_idle_seconds": 600,
+    "products_hours": 24
+  },
+  "hupu_url_template": "",
+  "shops": [
+    "pchome",
+    "momo",
+    "yahoo"
+  ],
+  "price_match_range": [
+    0.7,
+    1.3
+  ]
+}
